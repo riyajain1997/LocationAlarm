@@ -9,9 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <meta-data android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyDg-IelX8Ijiz4VCR08j9mHx5bgDiDS_-k"/>
-        <activity android:name=".enter_details"></activity>
+        <activity android:name=".DemoActivity"></activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDg-IelX8Ijiz4VCR08j9mHx5bgDiDS_-k" />
+
+        <activity android:name=".enter_details" />
         <activity android:name=".row_data" />
         <activity android:name=".AddTask" />
         <activity android:name=".HomePage" />
