@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:padding="32dp"
-    android:background="#fffff">
+    android:background="@color/cardview_light_background"
+    >
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -44,6 +45,7 @@
         android:layout_alignParentBottom="true"
         android:background="@color/colorPrimary"
         android:textColor="#FFFFFF"
+        android:onClick="grant"
         android:text="Grant Permission"
         android:textAllCaps="false"/>
 

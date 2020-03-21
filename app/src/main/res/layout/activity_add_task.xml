@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:weightSum="10"
-    tools:context=".AddTask">
+    tools:context=".AddTask"
+    android:background="#EEF">
 
 
 

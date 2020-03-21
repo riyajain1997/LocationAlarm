@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 public class enter_details extends AppCompatActivity {
@@ -19,5 +20,15 @@ public class enter_details extends AppCompatActivity {
 
         Intent intent=getIntent();
         name.setHint(intent.getStringExtra("name"));
+    }
+
+    public void geolocation(View view) {
+        Intent intent=new Intent(enter_details.this,mapactivity.class);
+        startActivity(intent);
+    }
+
+    public void returnaddtask(View view) {
+        Intent intent=new Intent(enter_details.this,AddTask.class);
+        startActivity(intent);
     }
 }

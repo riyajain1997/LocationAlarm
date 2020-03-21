@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:paddingLeft="10dp"
     android:paddingRight="10dp"
-    tools:context=".enter_details">
+    tools:context=".enter_details"
+    android:background="#EEF">
 
 
     <TextView
@@ -25,7 +26,7 @@
 
     <EditText
         android:id="@+id/griddata"
-        android:layout_width="361dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
@@ -42,7 +43,7 @@
 
     <EditText
         android:id="@+id/extratips"
-        android:layout_width="333dp"
+        android:layout_width="match_parent"
         android:layout_height="55dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
@@ -58,7 +59,7 @@
 
     <EditText
         android:id="@+id/editText"
-        android:layout_width="333dp"
+        android:layout_width="match_parent"
         android:layout_height="55dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
@@ -73,43 +74,21 @@
         android:textColor="#000"
         android:textSize="20sp" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="55dp"
+    <ImageButton
+        android:layout_width="97dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="113dp"
-        android:layout_marginTop="361dp"
-        android:layout_marginEnd="101dp"
-        android:layout_marginBottom="315dp"
-        android:background="@drawable/button"
-        android:gravity="center"
-        android:text="Add task"
-        android:textSize="20sp" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="48dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="113dp"
-        android:layout_marginTop="444dp"
-        android:layout_marginEnd="98dp"
-        android:layout_marginBottom="239dp"
-        android:background="@drawable/button"
-        android:gravity="center"
-        android:padding="10dp"
-        android:shape="rectangle"
-        android:text="Cancel"
-        android:textSize="20sp" />
+        android:layout_marginStart="171dp"
+        android:layout_marginLeft="@dimen/cardview_compat_inset_shadow"
+        android:layout_marginTop="619dp"
+        android:layout_marginEnd="133dp"
+        android:layout_marginBottom="29dp"
+        android:onClick="geolocation"
+        android:scaleType="fitCenter"
+        android:src="@drawable/plus" />
 
 
 </RelativeLayout>

@@ -35,8 +35,9 @@ public class MainActivity extends AppCompatActivity {
 
         if(ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.ACCESS_FINE_LOCATION)== PackageManager.PERMISSION_GRANTED)
         {
-            startActivity(new Intent(MainActivity.this, HomePage.class));
-            finish();
+            Intent intent = new Intent(MainActivity.this,HomePage.class);
+            startActivity(intent);
+//            finish();
             return;
         }
         btnGrant=findViewById(R.id.btn_grant);
@@ -86,5 +87,10 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+    }
+
+    public void grant(View view) {
+        Intent intent = new Intent(MainActivity.this,HomePage.class);
+        startActivity(intent);
     }
 }
