@@ -1,6 +1,7 @@
 package com.example.locationalarm;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -23,6 +24,16 @@ public class AddTask extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_task);
+
+        Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar_top);
+        toolbar.setTitle("ADD TASK");
+        //toolbar.setNavigationIcon(R.drawable.quantum_ic_arrow_back_grey600_24);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),HomePage.class));
+            }
+        });
 
         gridView =findViewById(R.id.gridView);
 

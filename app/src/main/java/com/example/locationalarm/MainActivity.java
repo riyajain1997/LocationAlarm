@@ -33,13 +33,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        if(ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.ACCESS_FINE_LOCATION)== PackageManager.PERMISSION_GRANTED)
-        {
-            Intent intent = new Intent(MainActivity.this,HomePage.class);
-            startActivity(intent);
-//            finish();
-            return;
-        }
+//        if(ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.ACCESS_FINE_LOCATION)== PackageManager.PERMISSION_GRANTED)
+//        {
+//            Intent intent = new Intent(MainActivity.this,HomePage.class);
+//            startActivity(intent);
+////            finish();
+//            return;
+//        }
         btnGrant=findViewById(R.id.btn_grant);
 
         btnGrant.setOnClickListener(new View.OnClickListener() {

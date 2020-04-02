@@ -4,39 +4,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="10dp"
-    android:paddingRight="10dp"
     tools:context=".enter_details"
     android:background="#EEF">
 
+    <include layout="@layout/toolbar"/>
 
-    <TextView
-        android:id="@+id/enterdetailstext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="81dp"
-        android:layout_marginBottom="671dp"
-        android:text="ENTER DETAILS"
-        android:textColor="@android:color/black"
-        android:textSize="34sp"
-        android:textStyle="normal|bold|italic" />
+<!--    <TextView-->
+<!--        android:id="@+id/enterdetailstext"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginStart="88dp"-->
+<!--        android:layout_marginBottom="582dp"-->
+<!--        android:textColor="@android:color/black"-->
+<!--        android:textSize="34sp"-->
+<!--        android:textStyle="normal|bold|italic" />-->
 
     <EditText
         android:id="@+id/griddata"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="108dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginBottom="562dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="141dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="528dp"
         android:hint="meet"
         android:textColor="#000"
         android:textSize="20sp" />
@@ -44,48 +42,33 @@
     <EditText
         android:id="@+id/extratips"
         android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="179dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginBottom="485dp"
-        android:hint="Extra tips"
-        android:textColor="#000"
-        android:textSize="20sp" />
-
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_centerInParent="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="255dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginBottom="409dp"
-        android:hint="Set Location"
-        android:textColor="#000"
-        android:textSize="20sp" />
-
-    <ImageButton
-        android:layout_width="97dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="171dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="251dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="413dp"
+        android:hint="Extra tips"
+        android:textColor="#000"
+        android:textSize="20sp" />
+
+    <ImageButton
+        android:id="@+id/addDetails"
+        android:layout_width="114dp"
+        android:layout_height="75dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="156dp"
         android:layout_marginLeft="@dimen/cardview_compat_inset_shadow"
-        android:layout_marginTop="619dp"
-        android:layout_marginEnd="133dp"
+        android:layout_marginTop="627dp"
+        android:layout_marginEnd="141dp"
         android:layout_marginBottom="29dp"
+        android:background="#EEF"
         android:onClick="geolocation"
         android:scaleType="fitCenter"
         android:src="@drawable/plus" />

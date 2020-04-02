@@ -8,11 +8,47 @@
     tools:context=".HomePage"
     android:background="#EEF">
 
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/toolbar" />
+
 <!--    <ImageView-->
 <!--        android:layout_width="match_parent"-->
 <!--        android:layout_height="match_parent"-->
 <!--        android:background="@drawable/alarm"-->
 <!--        android:scaleType="centerCrop"/>-->
+
+    <TextView
+        android:id="@+id/textViewNoTodo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="NoThing \n ToDo's"
+        android:layout_margin="15dp"
+        android:layout_marginTop="15dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"
+        tools:ignore="MissingConstraints" />
+
+
+    <ListView
+        android:id="@+id/listViewReminders"
+        android:layout_width="348dp"
+        android:layout_height="629dp"
+        android:layout_marginBottom="28dp"
+        android:divider="@color/white"
+        android:dividerHeight="4dp"
+        android:headerDividersEnabled="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints">
+
+    </ListView>
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/addbtn"
@@ -26,7 +62,9 @@
         app:layout_constraintHorizontal_bias="0.244"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.909">
+        app:layout_constraintVertical_bias="0.909"
+
+        >
 
     </androidx.appcompat.widget.AppCompatImageView>
 
@@ -70,7 +108,17 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.959" />
 
-    <androidx.appcompat.widget.AppCompatImageView
+<!--    <Button-->
+<!--        android:id="@+id/button"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="340dp"-->
+<!--        android:text="Button"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        tools:ignore="MissingConstraints"-->
+<!--        tools:layout_editor_absoluteX="149dp" />-->
+
+        <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/setbtn"
         android:layout_width="60dp"
         android:layout_height="60dp"

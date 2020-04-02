@@ -3,6 +3,8 @@
     package="com.example.locationalarm">
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -11,15 +13,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".ViewRemainder"></activity>
         <activity
             android:name=".mapactivity"
             android:label="@string/title_activity_mapactivity"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".DemoActivity" />
+            android:theme="@style/AppTheme.NoActionBar" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyDg-IelX8Ijiz4VCR08j9mHx5bgDiDS_-k" />
+            android:value="AIzaSyD59_lusEb09NvCVkkp5d3Y8Keovo_3tG0" />
 
         <activity android:name=".enter_details" />
         <activity android:name=".row_data" />
