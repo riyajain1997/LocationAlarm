@@ -13,7 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ViewRemainder"></activity>
+        <activity android:name=".Notification"></activity>
+        <activity android:name=".ViewRemainder" />
         <activity
             android:name=".mapactivity"
             android:label="@string/title_activity_mapactivity"

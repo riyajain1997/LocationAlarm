@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 import androidx.annotation.Nullable;
 
@@ -66,6 +67,15 @@ public class Databasehelper extends SQLiteOpenHelper {
     {
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery("select * from "+TABLE_NAME,null);
+        return cursor;
+    }
+
+    public Cursor getRemainder(int id)
+    {
+        SQLiteDatabase db = this.getReadableDatabase() ;
+        String qry = "select * from "+ TABLE_NAME + " where ID = " +id;
+        Log.e("CursorQuery = ",qry);
+        Cursor cursor = db.rawQuery(qry,null);
         return cursor;
     }
 

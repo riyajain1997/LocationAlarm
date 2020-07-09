@@ -15,6 +15,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.CompoundButton;
@@ -42,7 +43,7 @@ public class HomePage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
-        Toolbar toolbar=(Toolbar)findViewById(R.id.toolbar_top);
+       // Toolbar toolbar=(Toolbar)findViewById(R.id.toolbar_top);
 //        toolbar.setTitle("HOME PAGE");
 //        toolbar.setNavigationIcon(R.drawable.quantum_ic_arrow_back_grey600_24);
 //         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
@@ -51,11 +52,34 @@ public class HomePage extends AppCompatActivity {
 //                 startActivity(new Intent(getApplicationContext(),AddTask.class));
 //             }
 //         });
+//        Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar_top);
+//        toolbar.setTitle("HOME PAGE");
+//        toolbar.setNavigationIcon(R.drawable.quantum_ic_arrow_back_grey600_24);
+//        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(getApplicationContext(),AddTask.class));
+//            }
+//        });
 
         databaseHelper = new Databasehelper(this);
         listViewRemindersList = (ListView)findViewById(R.id.listViewReminders);
 
         setupList();
+
+
+
+        listViewRemindersList.setOnItemClickListener(new OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                int rem = arrayListReminderId.get(position);
+                Intent intent = new Intent(HomePage.this,ViewRemainder.class);
+                intent.putExtra("Remid",rem);
+                startActivity(intent);
+            }
+        });
+
 
         //toast for trial afterwards remove this
 //        btnviewAll = findViewById(R.id.button);
